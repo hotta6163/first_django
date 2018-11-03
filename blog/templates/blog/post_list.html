@@ -22,5 +22,14 @@
     <div>
       <h3><a href='/author/'>投稿者</a></h3>
     </div>
+    <br><br>
+    {% for post in posts %}
+        <div>
+          <p>published: {{ post.published_date }}</p>
+          <h2><a href = "">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</b>
+          <br><br>
+        </div>
+    {% endfor %}
   </body>
 </html>
